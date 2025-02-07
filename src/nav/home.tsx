@@ -8,7 +8,7 @@ function Home(){
     const [fetchError, setFetchError] = useState<string | null>(null)
     
     useEffect(() => { 
-        console.log(import.meta.env.VITE_APP_SUPABASE_URL)
+        console.log(`env + ${import.meta.env.VITE_APP_SUPABASE_URL}}`)
         const fetchAll = async () => {
             // First fetch playsets
             const {data: playsetData, error: playsetError} = await supabase
