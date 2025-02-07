@@ -6,8 +6,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function Home(){
     const [playset, setPlayset] = useState<Array<{id: number, user_id: string,table_name: string, columns: number}> | null>(null)
     const [fetchError, setFetchError] = useState<string | null>(null)
-
+    
     useEffect(() => { 
+        console.log(import.meta.env.VITE_APP_SUPABASE_URL)
         const fetchAll = async () => {
             // First fetch playsets
             const {data: playsetData, error: playsetError} = await supabase
