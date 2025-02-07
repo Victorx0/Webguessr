@@ -1,0 +1,26 @@
+name: Deploy Vite App
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Create .env file
+        run: |
+          echo "VITE_APP_SUPABASE_URL=${{ secrets.VITE_APP_SUPABASE_URL }}" >> .env
+          echo "VITE_APP_ANON_KEY=${{ secrets.VITE_APP_ANON_KEY }}" >> .env
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build Vite App
+        run: npm run build
+
+      - name: Deploy (Optional)
+        run: |
+          # Add deployment steps here, e.g., upload to Netlify, Vercel, or Firebase
