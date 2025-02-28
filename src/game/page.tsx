@@ -100,7 +100,7 @@ function Page() {
                         onClick={() => {setnumberEffect(1)}}
                     >
                         <i className="bi bi-arrow-repeat me-2"></i>
-                        New Champion
+                        New Game
                     </button>
                 </div>
             </div>
