@@ -22,7 +22,9 @@ function App() {
         <Route path="/login" element={<Login />}/>
         <Route path="/" element={<Home />}/>
         <Route path="/play/:id" element={
+          <Wrapper>
             <Page/>
+          </Wrapper>
           }/>
         <Route path="/dashboard" element={
           <Wrapper>
