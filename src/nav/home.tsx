@@ -37,7 +37,7 @@ function Home() {
             <div className="text-center mb-5">
                 <h1 className="display-4">Welcome to Webguessr</h1>
                 <p className="lead">Guess anything playing user created Games!</p>
-                <p className="lead">Login to create your own Games!</p>
+                <p className="lead">Login to play and create your own Games!</p>
                 <Link to="/login" className="btn btn-primary btn-lg">
                     Log In
                 </Link>
